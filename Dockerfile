@@ -8,7 +8,7 @@ RUN php -r "copy('https://getcomposer.org/installer', '/tmp/composer-setup.php')
 RUN php /tmp/composer-setup.php --no-ansi --install-dir=/usr/local/bin --filename=composer && \
     rm -rf /tmp/composer-setup.php
 
-RUN php -r "copy('https://phar.phpunit.de/phpunit.phar','/tmp/phpunit.phar');"
+RUN php -r "copy('https://phar.phpunit.de/phpunit-7.0.0.phar','/tmp/phpunit.phar');"
 RUN chmod +x /tmp/phpunit.phar
 RUN mv /tmp/phpunit.phar /usr/local/bin/phpunit
 
